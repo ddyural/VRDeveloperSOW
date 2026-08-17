@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cacdbdff4893043a2e312cdd8df0ea, type: 3}
+  m_Name: Training
+  m_EditorClassIdentifier: Assembly-CSharp::Scenario
+  steps:
+  - type: 0
+    text: PickUpObject
+    targetId: Item_01
+    duration: 0
+  - type: 1
+    text: ShootTargets
+    targetId: 
+    duration: 0
+  - type: 2
+    text: PickUpBox
+    targetId: 
+    duration: 0
+  - type: 3
+    text: PlaceBoxOnPressurePlate
+    targetId: 
+    duration: 0
+  - type: 4
+    text: EnterZone
+    targetId: 
+    duration: 0
+  - type: 5
+    text: UseMagneticGun
+    targetId: 
+    duration: 0
