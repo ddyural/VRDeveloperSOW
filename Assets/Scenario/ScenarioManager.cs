@@ -13,7 +13,8 @@ using static ScenarioRunner;
 // 2. StartScenario(tutorialScenario); -> передаёт TutorialScenario в ScenarioRunner
 // 3. StopScenario(); - стоп сценарию
 // 4. ScenarioManager.Instance.IsRunning -> позволяет другим системам узнать, идёт ли сценарий
-// 5. В будущем может переключать сценарии
+// 5. Завершить текущий шаг
+// 6. В будущем может переключать сценарии
 // TutorialScenario завершён -> ScenarioManager -> запускает Level1Scenario
 
 // в ScenarioManager НЕТ
@@ -71,4 +72,11 @@ public class ScenarioManager : MonoBehaviour
     {
         runner.Stop();
     }
+
+    // завершить текущий шаг
+    public bool CompleteCurrentStep(string targetId)
+    {
+        return runner.TryCompleteCurrentStep(targetId);
+    }
+
 }

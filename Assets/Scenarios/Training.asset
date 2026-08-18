@@ -19,21 +19,21 @@ MonoBehaviour:
     duration: 0
   - type: 1
     text: ShootTargets
-    targetId: 
+    targetId: Target_01
     duration: 0
   - type: 2
     text: PickUpBox
-    targetId: 
+    targetId: Box_01
     duration: 0
   - type: 3
     text: PlaceBoxOnPressurePlate
-    targetId: 
+    targetId: Plate_01
     duration: 0
   - type: 4
     text: EnterZone
-    targetId: 
+    targetId: Zone_01
     duration: 0
   - type: 5
     text: UseMagneticGun
-    targetId: 
+    targetId: Item_02
     duration: 0

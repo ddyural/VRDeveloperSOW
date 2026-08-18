@@ -270,18 +270,38 @@ public class ScenarioRunner : MonoBehaviour
 
     public bool TryCompleteCurrentStep(string targetId)
     {
-        // проверка разных ошибок
+        Debug.Log($"=== Попытка завершить шаг ===");
+        Debug.Log($"IsRunning: {IsRunning}");
+        Debug.Log($"CurrentStep: {CurrentStep}");
+        Debug.Log($"CurrentStep.targetId: {CurrentStep?.targetId}");
+        Debug.Log($"Полученный targetId: {targetId}");
+
         if (!IsRunning)
+        {
+            Debug.LogWarning("Сценарий сейчас НЕ запущен!");
             return false;
+        }
 
         if (CurrentStep == null)
+        {
+            Debug.LogWarning("CurrentStep == null!");
             return false;
+        }
 
         if (CurrentStep.targetId != targetId)
+        {
+            Debug.LogWarning(
+                $"ID НЕ совпадают! Scenario: '{CurrentStep.targetId}' | Object: '{targetId}'"
+            );
+
             return false;
+        }
 
         currentStepCompleted = true;
 
+        Debug.Log($"ШАГ УСПЕШНО ЗАВЕРШЁН: {targetId}");
+
         return true;
     }
+
 }
